@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+img {display:block; max-width:100%; }
+
+:root {
+	--light-blue:#B2F7EF;
+	--med-blue:#7BDFF2;
+	--light:#EFF7F6;
+	--grey:#696969;
+	--white:#FFFFFF;
+	--black:#000000;
+	--img: url("paint-pink.jpg");
+}
+
+.container {
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, minmax(335px, auto)); /*minmax(340px, auto)*/
+	grid-template-areas:
+	"name tile1 slogan socials"
+	"services about tile2 contact";
+}
+
+.text-box {
+	
+	
+	line-height: 1.5;
+	font-size: 1.5rem;
+	font-family: Montserrat;
+	text-align:left;
+
+}
+
+#name {
+	grid-area: name;
+	background-color: var(--light-blue);
+	
+}
+
+#name .text-box p {
+	padding: 40% 0 40% 30%;
+	height: auto;
+	color: var(--grey);
+}
+
+#slogan .text-box p {
+	padding: 27% 0 0 27%;
+	height: auto;
+	color: var(--light);
+}
+
+#tile1 {
+	grid-area: tile1;
+	background-image: var(--img);
+	background-repeat: no-repeat, repeat;
+	background-size: 120%;
+}
+
+
+#tile2 {
+	grid-area: tile2;
+	background-image: var(--img);
+	background-repeat: no-repeat, repeat;
+	background-size: 120%;
+}
+
+#slogan {
+	grid-area: slogan;
+	background-color: var(--med-blue);
+}
+
+#slogan p {
+	padding: 20% 20% 20% 20%;
+}
+
+
+#socials {
+	grid-area: socials;
+	background-color: var(--light);
+	
+}
+
+#icons {
+	padding: 25% 80% 0 45%;
+}
+
+#socials #icons i {
+	padding: 0.5rem;
+	font-size: 2.5rem;
+	color: var(--grey);
+}
+
+#socials ul {
+	text-decoration: none;
+	list-style: none;
+}
+
+#services {
+	grid-area: services;
+	background-color: var(--med-blue);
+
+}
+
+#services p {
+	color: var(--light);
+	padding: 27% 0 0 25%;
+}
+
+#about {
+	grid-area: about;
+	background-color: var(--light);
+}
+
+
+#about p {
+	padding: 40% 20% 20% 40%;
+	color: var(--grey);
+}
+
+#contact {
+	grid-area: contact;
+	background-color: var(--light-blue);
+}
+
+#contact i {
+	font-size: 2.5rem;
+	color: var(--grey);
+	padding: 30% 0 10% 47%;
+}
+
+#contact p {
+	padding: 0 0 0 27%;
+	color: var(--grey);
+}
