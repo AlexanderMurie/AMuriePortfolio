@@ -11,11 +11,14 @@ img {display:block; max-width:100%; }
 	
 	--light-shade:#B2F7EF;
 	--medium-shade:#7BDFF2; 
-	--final-shade:#EFF7F6;
+	--dust-shade:#EFF7F6;
 	--text-soft-white:#EFF7F6;
 	--grey:#696969;
 	--white:#FFFFFF;
 	--black:#000000;
+	--hover-lav:#DDA0DD; 
+	--hover-peach:#FFEFD5;
+	--hover-soft-blue:#B0E0E6;
 	--img: url("paint-pink-compressed.jpg");
 	
 	
@@ -44,6 +47,8 @@ img {display:block; max-width:100%; }
 
 }
 
+
+
 .modal {
 	
 	grid-column-start: 1;
@@ -56,13 +61,25 @@ img {display:block; max-width:100%; }
 	margin-bottom: 6rem;
 	background-color: var(--grey);
 	order: 2;
+	/*display:block;*/
 
-	/*display:none;*/
+	display:none;
 }
+
+
+
+
+
+/* Name section */
 
 #name {
 	grid-area: name;
 	background-color: var(--light-shade);
+	
+}
+
+#name:hover{
+	background-color: var(--hover-soft-blue);
 	
 }
 
@@ -72,12 +89,18 @@ img {display:block; max-width:100%; }
 	color: var(--grey);
 }
 
-#slogan .text-box p {
-	padding: 27% 0 0 27%;
-	height: auto;
-	color: var(--text-soft-white);
+#name .text-box a {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-decoration: none;
+
 }
 
+/* end name */
+
+
+/* Tile section */
 
 #tile1 {
 	grid-area: tile1;
@@ -94,37 +117,72 @@ img {display:block; max-width:100%; }
 	background-size: 120%;
 }
 
+/* end tile */
+
+
+/* Slogan section */
+
 #slogan {
 	grid-area: slogan;
 	background-color: var(--medium-shade);
 }
 
-#slogan p {
-	padding: 20% 20% 20% 20%;
+#slogan .text-box p {
+	padding: 27% 0 30% 27%;
+	height: auto;
+	color: var(--text-soft-white);
 }
 
+#slogan .text-box a {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-decoration: none;
+
+}
+
+#slogan:hover {
+	background-color: var(--hover-lav);
+	opacity: 0.8;
+}
+
+/* end slogan */
+
+
+
+/* Socials / icons section */
 
 #socials {
 	grid-area: socials;
-	background-color: var(--final-shade);
+	background-color: var(--dust-shade);
 	
 }
 
 #icons {
-	padding: 25% 0 0 45%; /*load time/consistency/layout problem with 25% 80% 0 45% ; browser would need to cache page first, bad design*/
+	padding: 27% 0 10% 45%; 
 	
 }
 
 #socials #icons i {
-	padding: 0.5rem;
+	padding: 1rem;
 	font-size: 2.5rem;
 	color: var(--grey);
 }
 
-#socials ul {
+#icons a {
 	text-decoration: none;
-	list-style: none;
+	width: 100%;
+	height: 100%;
 }
+
+#socials:hover {
+	background-color: var(--hover-peach);
+}
+/* end socials */
+
+
+
+/* Services section */
 
 #services {
 	grid-area: services;
@@ -132,21 +190,58 @@ img {display:block; max-width:100%; }
 
 }
 
-#services p {
+#services .text-box p {
 	color: var(--text-soft-white);
-	padding: 27% 0 0 25%;
+	padding: 27% 0 30% 25%;
 }
+
+#services .text-box a {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-decoration: none;
+}
+
+#services:hover {
+	background-color: var(--hover-lav);
+	opacity: 0.8;
+}
+
+
+/* end services */
+
+
+
+/* About section */
+
 
 #about {
 	grid-area: about;
-	background-color: var(--final-shade);
+	background-color: var(--dust-shade);
 }
 
 
-#about p {
-	padding: 40% 20% 20% 40%;
+#about .text-box p {
+	padding: 40% 20% 45% 40%;
 	color: var(--grey);
 }
+
+#about .text-box a {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-decoration: none;
+}
+
+#about:hover {
+	background-color: var(--hover-peach);
+	opacity: 0.8;
+}
+
+/* end about */
+
+
+/* Contact section */
 
 #contact {
 	grid-area: contact;
@@ -159,7 +254,20 @@ img {display:block; max-width:100%; }
 	padding: 30% 0 10% 47%;
 }
 
-#contact p {
-	padding: 0 0 0 27%;
+#contact .text-box p {
+	padding: 0 0 30% 27%;
 	color: var(--grey);
 }
+
+#contact .text-box a {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-decoration: none;
+}
+
+#contact:hover {
+	background-color: var(--hover-soft-blue);
+}
+
+/* end contact */
